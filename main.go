@@ -27,6 +27,7 @@ func setupRouter() *gin.Engine {
 		}
 		payload["a"] = voteA
 		payload["b"] = voteB
+		
 		c.JSON(http.StatusOK, payload)
 	})
 	
