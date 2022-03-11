@@ -29,6 +29,13 @@ func setupRouter() *gin.Engine {
 		payload["b"] = voteB
 		c.JSON(http.StatusOK, payload)
 	})
+	
+	r.GET("/bill-dillon", func(c *gin.Context) {
+		payload := gin.H{}
+		payload["a"] = "Bill"
+		payload["b"] = "Dillon"
+		c.JSON(http.StatusOK, payload)
+	})
 
 	r.POST("/vote", func(c *gin.Context) {
 		buf := make([]byte, 1024)
