@@ -32,8 +32,10 @@ func setupRouter() *gin.Engine {
 	
 	r.GET("/bill-dillon", func(c *gin.Context) {
 		payload := gin.H{}
+		
 		payload["a"] = "Bill"
 		payload["b"] = "Dillon"
+		
 		c.JSON(http.StatusOK, payload)
 	})
 
